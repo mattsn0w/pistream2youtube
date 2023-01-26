@@ -1,0 +1,43 @@
+version: '3.3'
+services:
+    debian-bullseye:
+        image: 'debian-bullseye:raspistream'
+        container_name: stream2youtube
+        privileged: true
+        restart: always
+        volumes:
+            - '/var/run/docker.sock:/tmp/docker.sock:ro'
+            - '/dev/:/dev/'
+            - '/run/udev/:/run/udev/'
+            - '/run/dbus/:/run/dbus/'
+        environment:
+            YTS_KEY: ${YTS_KEY}
+        logging:
+            options:
+                max-size: 10m
+        devices:
+            - /dev/vchiq
+            - /dev/media0
+            - /dev/media1
+            - /dev/media2
+            - /dev/media3
+            - /dev/media4
+            - '/dev/dma_heap/linux,cma'
+            - /dev/v4l-subdev0
+            - /dev/video0
+            - /dev/video10
+            - /dev/video11
+            - /dev/video12
+            - /dev/video13
+            - /dev/video14
+            - /dev/video15
+            - /dev/video16
+            - /dev/video17
+            - /dev/video18
+            - /dev/video19
+            - /dev/video20
+            - /dev/video21
+            - /dev/video22
+            - /dev/video23
+            - /dev/video24
+            - /dev/video31
