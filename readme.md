@@ -17,4 +17,4 @@ For now you need to run the `build_container.sh` script, or run `docker build -t
 
 ## Docker Compose up
 Make sure you get the latest docker-compose binary from https://github.com/docker/compose/.   
-Then simply run 
+Then cd to the directory where your docker-compose.yml is and run `docker-compose up` to launch the container in interactive mode. Monitor the log output to ensure the capture from the camera is working and sending to youtube with ffmpeg.
